@@ -1,0 +1,1372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0145)https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+(function(){
+window["loaderConfig"] = "/TSPD/?type=21";
+})();
+
+</script>
+
+<script type="text/javascript" src="./Bank of India Internet Banking Retail Signon_files/saved_resource"></script>
+
+
+<meta name="GENERATOR" content="Mozilla/4.7 [en] (WinNT; I) [Netscape]">
+<title>Bank of India  Internet Banking Retail Signon</title>
+<link rel="stylesheet" href="./Bank of India Internet Banking Retail Signon_files/Nw_Lgn_style.css" type="text/css">
+<script language="javascript" src="./Bank of India Internet Banking Retail Signon_files/progress_bar.js"></script>
+<style>
+    .Logcheckbox{ height:18px; width:18px; background-color:#fff; border:1px solid #5c7d90; margin:0 3px 0 31px; float:left;  }
+    </style>
+<script language="JavaScript">
+ 
+function myFunction() {
+  document.getElementById("CorporateSignonCorpId").innerHTML = "Iframe is loaded.";
+
+}
+
+function Focus()
+{   
+	
+	
+	HidePrgBar();
+	settingPinPadCtl(this,1,'CorporateSignonPassword',true);	
+	setPinPadCtl('document.RetailSignOn.CorporateSignonPassword');
+	
+	
+	//document.RetailSignOn.CorporateSignonCorpId.value = "User ID";
+	//document.RetailSignOn.CorporateSignonPassword.value = "Password";
+	
+}
+function HidePrgBar()
+{
+	obj = document.getElementById("Progress");
+	if (obj.style.display != "none")
+	{				
+	obj.style.display = "none";
+	}
+}
+function ShowPrgBar()
+{
+	obj = document.getElementById("Progress");
+	if (obj.style.display == "none")
+	{				
+	obj.style.display = "";
+	}
+}
+
+
+
+var secs
+var timerID = null
+var timerRunning = false
+var delay = 3
+
+function InitializeTimer()
+{
+    // Set the length of the timer, in seconds
+    secs = 4500
+    StopTheClock()
+    StartTheTimer()
+}
+
+function StopTheClock()
+{
+    if(timerRunning)
+        clearTimeout(timerID)
+    timerRunning = false
+}
+
+function StartTheTimer()
+{
+    if (secs==0)
+    {
+        StopTheClock()
+        // Here's where you put something useful that's
+        // supposed to happen after the allotted time.
+        // For example, you could display a message:
+        my_window.close();
+
+    }
+    else
+    {
+        self.status = secs
+        secs = secs - 1
+        timerRunning = true
+        timerID = self.setTimeout("StartTheTimer()", delay)
+    }
+}
+function HidePrgBar()
+{
+	obj = document.getElementById("Progress");
+	if (obj.style.display != "none")
+	{				
+	obj.style.display = "none";
+	}
+}
+function ShowPrgBar()
+{
+	obj = document.getElementById("Progress");
+	if (obj.style.display == "none")
+	{				
+	obj.style.display = "";
+	}
+}
+<!--
+
+//Disable right mouse click Script
+
+var message="Right Click Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+
+function clearfields() 
+{
+	RetailSignOn.CorporateSignonCorpId.value="";
+	RetailSignOn.CorporateSignonPassword.value="";
+}
+function DataValidation()
+{
+const type = password.getAttribute('type') === 'text' ? 'password' : 'password';
+password.setAttribute('type', type);
+var pwdlen= (RetailSignOn.CorporateSignonPassword.value).length;
+var usridlen= (RetailSignOn.CorporateSignonCorpId.value).length;
+
+if (usridlen <= 3)
+	{
+	alert("Invalid UserId or Password");
+	return false;
+	}
+if (pwdlen <= 7)
+	{
+	alert("Invalid UserId or Password");
+	return false;
+	}
+else
+	{
+	if( RetailSignOn.cLogCVal.value == "Enter the Characters Displayed Above" ) 
+    {
+       	document.RetailSignOn.cLogCVal.value=""; 
+       	alert("Login: Please enter verification characters as displayed");
+	    return false; 
+    }
+    
+	encryptValues();
+	}
+	document.RetailSignOn.button1.disabled = true;
+	ShowPrgBar();
+}
+function ValidationCaptchaVoice()
+{
+
+	var pwd= (RetailSignOn.CorporateSignonPassword.value);
+	var usrid= (RetailSignOn.CorporateSignonCorpId.value);
+	
+	if( usrid == "User ID" || pwd == "" || usrid == "" || pwd == "Password") 
+	  {
+			alert("Invalid UserId or Password");
+			return false;
+	  }
+}
+
+function MM_openBrWindow(theURL,winName,features) 
+{ //v2.0
+  window.open(theURL,winName,features);
+}
+// -->
+function virtualKey()
+{
+    if(document.getElementById("virtualpassword").checked == true)
+    {
+        var virt1= 1;
+        document.RetailSignOn.CorporateSignonPassword.focus();
+        settingPinPadCtl(this,1,'CorporateSignonPassword',false);
+        setPinPadCtl(document.RetailSignOn.CorporateSignonPassword);
+        RetailSignOn.CorporateSignonPassword.readOnly = true;        
+    }
+    else
+    {   
+        var virt1= 0;
+        settingPinPadCtl(this,1,'CorporateSignonPassword', true);
+        setPinPadCtl(document.RetailSignOn.CorporateSignonPassword);
+        RetailSignOn.CorporateSignonPassword.readOnly = false;
+        document.RetailSignOn.CorporateSignonPassword.focus();    
+        
+    }
+} 
+
+
+
+function UserID(event)
+{
+
+
+//document.RetailSignOn.CorporateSignonCorpId.value = "User ID";
+var n = document.RetailSignOn.CorporateSignonCorpId.value; 
+
+ if (n == "") 
+  {
+        document.RetailSignOn.CorporateSignonCorpId.value = "";
+        
+   }
+    
+ if( document.RetailSignOn.CorporateSignonCorpId.value == "User ID" && event.type == "focus") 
+  {
+  
+ document.RetailSignOn.CorporateSignonCorpId.value="";
+   
+  }
+  
+ }
+ function PassCode(event)
+  {
+  
+  var n = document.RetailSignOn.CorporateSignonPassword.value; 
+  
+   if (n == "" || n == null) 
+     {
+          document.RetailSignOn.CorporateSignonPassword.value = "";
+          
+     }
+      
+   if( document.RetailSignOn.CorporateSignonPassword.value == "Password" && event.type == "focus") 
+    {
+       	document.RetailSignOn.CorporateSignonPassword.value=""; 
+    } 
+ }
+
+ function CaptchaCode(event)
+  {
+  
+  var n = document.RetailSignOn.cLogCVal.value; 
+  
+   if (n == "" || n == null) 
+     {
+          document.RetailSignOn.cLogCVal.value = "Enter the Captcha Displayed Above"; 
+     }
+      
+   if( document.RetailSignOn.cLogCVal.value == "Enter the Captcha Displayed Above" && event.type == "focus") 
+    {
+       	document.RetailSignOn.cLogCVal.value=""; 
+    } 
+ }
+
+ function clearThis(target)
+    {
+        document.RetailSignOn.CorporateSignonCorpId.value = "User ID";
+    }
+    
+    
+    </script>
+
+<script type="text/javascript">
+    function blink() {
+        var blinks = document.getElementsByTagName('blink');
+        for (var i = blinks.length - 1; i >= 0; i--) {
+            var s = blinks[i];
+            s.style.color = (s.style.color === 'red') ? 'blue' : 'red';
+        }
+        window.setTimeout(blink, 1000);
+    }
+
+    if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+    else if (window.addEventListener) window.addEventListener("load", blink, false);
+    else if (window.attachEvent) window.attachEvent("onload", blink);
+    else window.onload = blink;
+    </script>
+
+
+
+ <script>
+var myIndex = 0; 
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 10000); // Change image every 10 seconds
+}
+</script>
+<style>
+.mySlides {display:none;}
+</style>
+	
+
+
+</head>
+
+<body bgcolor="#FFFFFF" onload="DoorstepPopup(0);Focus();exitpop();InitializeTimer();carousel();"><jsp:forward page="/web/errsec_RetUser.aspx">
+ 
+<!--********** Fix for Browser Detection Changes TICKET ID :131863  END *************-->
+<script>
+function exitpop()
+{
+
+    var isre='';
+   if(isre==""){
+                my_window = window.open('SafeInternetBanking', 'SafeInternetBanking', 'status=0,width=555,height=400,location=0, menubars=0, directories=0, resizable=0');
+                my_window.document.write('<h1 align="center">Important</h1><font size ="2" face="arial" color="red"><p>We at Bank of India will never send you e-mails or call you over phone and/or mobile asking for your confidential details such as Account No., User IDs, Passwords, transaction Passwords, OTP etc. or personal details such as date of birth, mothers maiden name etc. Beware of anyone asking you for such information on behalf of the bank through e-mails or phone calls. Also, you are advised not to disclose your bank account details by reverting to emails offering a job or claiming that you have won a lottery or open attachment of mails from unknown email ids. Kindly dont respond to such Phished emails and fraudulent telephone calls.<BR><BR> To report unauthorised transactions, visit https://www.bankofindia.co.in/Unauthorizedtransaction.<br><br> To Report Phishing (Fraudulent emails) and Vishing (Fraudulent phone calls) and any other grievances, visit https://www.bankofindia.co.in/OnlineGrievance<br><br> OUR CALL CENTRE NUMBER - 1800 220 229 (Tollfree) / 1800 103 1906 (Tollfree) /(022) - 40919191 (chargeable number) 24 X 7 <br><br>.</p></font>');
+                my_window.document.write('<center><button type="button" onclick="window.close()"> Skip</button> </center>');
+                my_window.document.title='SafeInternetBanking';
+	    } 
+}
+function getCall()
+{ 
+var dd='';
+if(dd==''){
+ document.getElementById("Image1").click(); 
+ }
+}
+
+</script>	
+
+
+
+
+
+<!-- ********** Start of Virtual Keyboard recon :Ticket Id:147976 *********** -->
+<form action="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/sgonHttpHandler.aspx?bwayparam=BjydKSunD3HxETXioNnccBHePihlB5UokKqY%2bIkWOh498L%2fF" method="POST" autocomplete="off" name="RetailSignOn">
+<!-- ********** End of Virtual Keyboard recon :Ticket Id:147976 *********** -->
+<center>
+<!-- Filename:  SecureSignOnPassword.aspx - Start -->
+<!-- Created By : Himanshu Mohan -->
+<!-- RECON ticket id:127675-Security issue -->
+
+
+
+<noscript>
+<BR><CENTER><B>Please Enable Java Script through : Tools > Internet Options > Security Settings > Custom Level.</B></CENTER>
+</noscript>
+
+<!-- /** Added for the call id - 346470 - BOC **/ -->
+<script type="text/javascript" language="javaScript" src="./Bank of India Internet Banking Retail Signon_files/obf_enc_master.js"></script>
+<!-- /** Added for the call id - 346470 - EOC **/ -->
+
+<!-- /** Removed Applet for the call id - 346470 **/ -->
+
+<script language="JavaScript">
+/* Modified by Praveen to provide Mozilla Browser Compatibility BOC */
+
+var isOpera=(navigator.userAgent.indexOf("Opera")!=-1)?true:false;
+var isMac=(navigator.userAgent.indexOf("Mac")!=-1);
+var isIE = (document.all && !isOpera && (!isMac || navigator.appVersion.indexOf("MSIE 4") == -1)) ? true : false;
+/*function checkApplet() 
+{
+	    /* Commented for UCO call id 299496 BOC
+	    //Start Of ticket id :144473
+		var securityReqd="N";
+		if (securityReqd != "N")
+		{
+			try
+			{
+				var appletVar = document.FinEcEcApplet.b;
+			}
+			catch(Error )
+			{
+				//alert("Your browser is not Java enabled please enable Java through : Tools > Internet Options > Security Settings > Custom Level.");
+				var oButton=document.getElementById("button1");
+				oButton.disabled = true;
+			}	
+		}
+	//End Of ticket id :144473   **** Commented for UCO call id 299496 BOC***/
+
+	//}
+function encryptValues()
+{	
+	// The value of this variable determines whether the pwd has to encrypted. 
+	//This value should be in sync with the value of SecurityRequired above.
+	// UCO call id 299496 BOC
+	var securityReqd="Y";
+	// UCO call id 299496 EOC
+	
+	for(j=0;document.forms[j] != null;j++)
+	{
+	    if(isIE)
+		{
+			/** Added for the call id - 346470 - BOC **/
+			try
+			{
+			/** Added for the call id - 346470 - EOC **/
+			newHidden=document.createElement("<INPUT TYPE='HIDDEN' NAME='isEncrypted' VALUE = 'N'>");
+			/** Added for the call id - 346470 - BOC **/
+			}
+			catch(error)
+			{
+				newHidden = document.createElement('input');
+				newHidden.setAttribute('type','HIDDEN');
+				newHidden.setAttribute('name','isEncrypted');
+				newHidden.setAttribute('VALUE','N');
+			}
+			/** Added for the call id - 346470 - EOC **/
+		} 
+		else 
+		{
+			newHidden = document.createElement('input');
+			newHidden.setAttribute('type','HIDDEN');
+			newHidden.setAttribute('name','isEncrypted');
+			newHidden.setAttribute('VALUE','N');
+		}
+		
+		document.forms[j].appendChild(newHidden);
+		for(i=0; document.forms[j].elements[i] != null ; i++)
+		{
+
+		   if(document.forms[j].elements[i].type == "password")
+			{
+	
+				if(document.forms[j].elements[i].value != "")
+				{
+					
+					var initialValue = document.forms[j].elements[i].value
+					if (securityReqd != "N")
+					{
+						/** Modified for the call id - 346470 - BOC **/
+						var randomkey = '0.846604774466453bmkrfecsh4bp5m0bhrxnxoqv'; 
+						document.forms[j].elements[i].value = encode64New(rc4EncryptNew(randomkey,initialValue));
+						/** Modified for the call id - 346470 - EOC **/						
+					}
+					else
+					{
+						document.forms[j].elements[i].value = initialValue;
+					}		
+					if(initialValue != document.forms[j].elements[i].value)
+					{
+
+						document.forms[j].isEncrypted.value="Y";
+					}					
+				}
+				else
+				{
+
+					document.forms[j].isEncrypted.value="Y";
+				}
+			}			
+		}	
+	}
+	j--;
+	var oButton=document.getElementById("button1");
+	if(isIE) 
+	{
+	    str="<INPUT TYPE='HIDDEN' NAME="+oButton.name+" VALUE = 'Y'>";
+	    	/** Added for the call id - 346470 - BOC **/
+		try
+		{
+		/** Added for the call id - 346470 - EOC **/
+	    newHidden=document.createElement(str);
+	    	/** Added for the call id - 346470 - BOC **/
+		}
+		catch(error)
+		{
+			newHidden = document.createElement('input');
+			newHidden.setAttribute('type','HIDDEN');
+			newHidden.setAttribute('name',oButton.name);
+			newHidden.setAttribute('VALUE','Y');
+		}
+		/** Added for the call id - 346470 - EOC **/
+	} 
+	else 
+	{
+		newHidden = document.createElement('input');
+		newHidden.setAttribute('type','HIDDEN');
+		newHidden.setAttribute('name',oButton.name);
+		newHidden.setAttribute('VALUE','Y');
+	}
+	document.forms[j].appendChild(newHidden);
+	document.forms[j].submit();
+}
+
+</script>
+<!-- Filename:  SecureSignOnPassword.aspx - End -->
+
+
+<!-- code modified to provide appropriate error messages for 21996 and 21997 errors: Start-->
+
+<!-- Middle Table -->
+		
+
+
+<!--********** Change of banner image for mobile banking : CR:  END *************-->
+
+<div class="main" style="border:2px">
+
+  <div class="middle">
+    <div class="Lshadow"><img src="./Bank of India Internet Banking Retail Signon_files/leftshadow.png" alt="Left Shadow"></div>
+    <div class="midcont">
+       <div class="header">
+         <div class="logo"><img src="./Bank of India Internet Banking Retail Signon_files/logo.jpg" alt="Bank of India Logo"></div>
+          <div class="Banner w3-content w3-section">
+		  <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/DICGClogo_QRCode.png" style="height: 183px; width: 717px">
+		  <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/Nationwide_awareness_poster.jpg" style="height: 183px; width: 717px">
+               <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/DSB1.jpg" style="height: 183px; width: 717px">
+               <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/DSB3.jpg" style="height: 183px; width: 717px">
+               <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/mbbanner2.png" style="height: 183px; width: 717px">
+               <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/mbbanner.jpg" style="height: 183px; width: 717px">
+			   <img class="mySlides" src="./Bank of India Internet Banking Retail Signon_files/mbbanner1.jpg" style="height: 183px; width: 717px"> 
+               </div>
+                </div> 
+            <!--------Scrolling Ticker Starts Here---------->
+              <div class="test"> 
+			 <font size="3" color="red" style="color: yellow;">
+               <marquee behavior="scroll" scrollamount="5" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="background: #007dc6;align-items: center;padding-bottom: 9px;padding-top: 9px;">
+               Dear Customers, As per RBI guidelines CKYC identification number (14 digits) is mandatory. Please submit your CKYC ID number (if available with you) and if the same is not available, kindly contact your home/nearest branch along with latest KYC documents to generate CKYC ID.****To Strengthen your Aadhaar,update your Aadhaar if 10 years old.****As per the RBI’s directives, All the IB customers mandatorily register their mobile for electronic transactions. Internet banking facilities of the customers where mobile number is not registered has been discontinued. Please register your mobile number with the nearest branch to activate internet banking services.
+                </marquee> 
+            </font>
+            </div>
+             <!--------Scrolling Ticker Ends Here------------->
+			
+         
+       
+       <div class="cont">
+         <div class="Login" style="height:370px">
+           <div class="retaillogin" align="left"><img src="./Bank of India Internet Banking Retail Signon_files/retaillogin.png" alt="Retail Login"></div>        
+           
+           &nbsp;
+           <input type="text" class="txtbox" style="height:35px" name="CorporateSignonCorpId" id="CorporateSignonCorpId" size="20" maxlength="32" tabindex="1" value="User ID" onfocus="UserID(event);">
+           
+           <br>
+           
+           <input type="Password" class="txtbox" style="height:35px;margin:11px 0 5px 15px;" autocomplete="off" name="CorporateSignonPassword" value="Password" size="20" maxlength="32" tabindex="2" id="id_password" onfocus="PassCode(event);">
+           
+				<img src="./Bank of India Internet Banking Retail Signon_files/Toggle_eye_close.png" width="5%" height="5%" style="margin-left: -9%;display:inline;
+				vertical-align: middle" id="togglePassword">
+ <div class="recomand"> 
+	<input id="virtualpassword" value="on" onclick="virtualKey()" style="height:18px; width:18px; background-color:#fff; border:1px solid #5c7d90; margin:0 3px 0 31px; float:left;" type="checkbox">&nbsp;Use virtual keyboard(Recommended)</div><br>
+	
+		 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAAtCAIAAACIxtbuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZkSURBVHhe7Zw9buNIEIUtpRtNNoEn8ALGwthgggkmGAOzwAYLKNMZdAAnDpw5Mhw60Q10Ap9AF9AFdAH7AA4cel/1K1b/kJRIiZQ4o/5Q8IhPxWZ3s1hdTRtz9mFMxvohIevk9PQiOOBBS8g6OUndBYd50Iysk1PVz+xTZIFHZFmnnYaeM0fWa/Vcc8RknTgx71ZKZJ1EwZHJxOTMUSLrJNccemhknTjRBYd50Iysk1PV83sOZ1mnxXrOHFmv1X+lmuPl5WX1Y/z2377tCFknG/VfYLeyWq1ms9lZwOXl5Xw+f3t7o4NyqP6kDExf/xzbdE2n0/V6rV+0bz8IjkHy8PDAcWLACAgABcEB5fr6Oo2Pg4MOIHaBHh8bhAKny8Bc6XftGXTmWCwWGB6CwIc/cP63t7f4Cj+pCf33Rz84np+f0TE3/wrCt9zPCnrTEansCaYFnwFnCV2Vr9u3P9yaA7UFh5rOeOHP/IEpSPSIHnRcEemafbv9czT/W8wyub8ThX9EnzpDYfZlZDqqNChIt5X+wkbdBYd50Iyj6s/fRhgYZl9FEDpPxkjmuBMSHLGuzqAfXe/BbKalcWHoD3Sw/O5uj5kRil3rmAde/eXfSBfMs6U+3PccCAs/0Q38I+tNx3YJvULSSiKDxvi4/KM0q43bV2uv27OED+gAuP7kkm7iSWvW/nAzx/SzjBY3Q0UQOsOMA+oM2XTtoDm4vkTJwzAl0BFPXJi8zedYtoTPcqcTf8GUQGc+Y1iEVMSHsU0fbs2hwRFvBChiCnT6ptMDr/FRoRPoevjxwSIa9zjRlZI/QgH+dSy+Nm2HHQOMJ1QbDFP8lK9L/spGfbi7lcrgwD4WOsOC0yHVFmnQPiIJ/pg4OdipnzL9Z8GkgdifK4vckmbt48nGKUDWqQJu4DFGOWjWjuuXm65CtyqEhw3b8UTBMSTu7u4uLi4wsKurq39qYHBMJpP7+/vHx8f393c9uR6eogc7IZO9sQXcHjjofd2J5XLJq/j81AD4Y2utBwXoBnQ9aE9wZvvI0g8JXeivr6/IqBjY+fk5Jivi+4j/3tzcwAHjR3A8PT1tbZ9Pkp/BnfqJFgAFJfZHcoIDHv3d2ufmE/gNfLN2cEqSafYfbzFOeNASjqpzZUGppSII/LmmSiKN9YhA5zO9zxoM47MY3bnYnyuCLyQTSv6KE7Gy8MUaCpdQr/MPdZyFvBjqrGYkTEGgR2zUXXCYB804ti6T9QkDlGHjieQOfv1zjKRiZXnzalxLxfCNEM1ooOuOkfFaiEhm0rfKlw0ww5QanVsh/zCYJ82o0rlbQQuYNBgqYteRMymwqvyFbfrQ/54D4+SUlYFeMXJaVftsR/bGpa8q/cVKOvrDuAw3mXLsdii8Qw9/+a/UGrTPsMPDgEs08Y8McVm8UA6RrVziSWvWfseZwwI2AQsE7g0e+sQ/MqOkIwjw3KNxtIOfyBx8UpWSvxLrzNhS5cW6OoNmOnIVB4WecES4McxwAFeRuxueYoRirKMdni4NGvX+lTrmZPZF5x8fdMEFNf5b9Y5rjrrgMHyPSU07fei4uqzKJNAjmumID4ZaJdHzmlClI16ZjeTVWUKVv3AQPSi8yx6kjW6vdJBg8dngHhL44tno4rrCRr1ih7l3+wgRDA2LCH4isSG9AVasUjc0boen4LnS44S9+6m014Pg6AJMk4RAKUNYpQZUOiy+Gu0fjN1vZ7YRve8aGH1ljnT5KN4QAD02uriusFHnPVgul9SEg1y3gkBHf9ArpFWthCo5nl7cKnjQElrqVhAlwcFSHPhVn9S007nO1I20n+h6aBxQR2dsTuR3As5s/QWS5wL/iIPoLjjMg2a01zE8HVkNUc1V307nOq9e1sWMw+osg4gFh1hB9KtdmBGKfeodv+fYEBzY7PnRbmsntf102yjKlIe3wdlu7xVShfZ76X1ljsXXEWpAvuEGeg9K/pEZXeu2qIVYcKgzsBZoxqnqHdccFhxWc/ClIfDv/kJq2sm6clS9CA5Q9iBtdKRthoIFh7zhKYos/aVXQhfXFbJOutOD4OiCcnCAsPIK9czA6T1zEFtc0q0s6OK6QtZJd3pfNYd/o+BAtUEdRK8pa9rJunJU3QWHedCM9jo2jasfYokOgzh3f12NXUyoezOyTo6t5/+fw1nWabHecebIuvB76JPx/88FyIVdeLAZAAAAAElFTkSuQmCC" style="height:auto;width:auto;">&nbsp; 
+		 <img onclick="getCall()" src="./Bank of India Internet Banking Retail Signon_files/cal.png" style="width:24px; height: 35px;font-size:13px;margin-top:10px;cursor: pointer;" alt="Click to Receive call for voice captcha." title="Click to Receive call for voice captcha.">
+		 <a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/sgonHttpHandler.aspx?bwayparam=FDqKNTasclb2CAnitsKdVy%2fWOGc4UtBwu7GSu6wMOhYn4eCYJTk3b9LC85XLYCcGCdvGqv4Igv9D%0d%0alI6Obmn%2f1n7H8%2blsufLtJaRJ%2fvGPp9hZ8%2bobQV60WwLa3Ex8qXl4lwE2nWtn8vvs" name="asdf"><img src="./Bank of India Internet Banking Retail Signon_files/refresh.png" alt="Refresh Captcha" title="Refresh Captcha"></a> <br>&nbsp; <input type="text" size="27" tabindex="3" style="width:260;height: 35px;font-size:13px;margin-top:10px" class="txtbox" autocomplete="off" onfocus="CaptchaCode(event);" onblur="CaptchaCode(event);" name="cLogCVal" value="Enter the Captcha Displayed Above">
+        <div style="font-size: 13px;color:#0d405e;width:75%" align="left">Captcha is NOT case-sensitive</div>
+	
+	<input class="butt  marT10 marL25" type="Submit" style="background-image:URL(https://starconnectcbs.bankofindia.com/BankAwayRetail/web/L001/images/submit.png);border-color:#FE642E;background-color:#C8EBFF;border:0;color:white;width:105px;height:30px" id="button1" name="Action.CorpUser.Signon" value="" onclick="return DataValidation();" tabindex="6">
+	              
+		      	<input class="butt  marT10 marL5" type="button" style="background-image:URL(https://starconnectcbs.bankofindia.com/BankAwayRetail/web/L001/images/reset.png);border-color:#FE642E;background-color:#C8EBFF;border:0;color:white;width:93px;height:31px" name="clear" value="" onclick="clearfields();">
+		      	                                  
+         </div>
+         <input class="butt  marT10 marL25" type="image" src="./Bank of India Internet Banking Retail Signon_files/cal.png" alt="Submit" size="10" style="width:24px; height: 35px;font-size:13px;margin-top:10px;cursor: pointer; display:none" title="Click to Receive call for voice captcha." "="" id="Image1" name="Action.CaptchaSMS.Validate" value="Captcha Voice" onclick="return ValidationCaptchaVoice();" tabindex="7">
+         <div class="Keyboard">
+	            <div class="welcome">Welcome to</div>
+	            <div class="Internetbanking">BOI Internet Banking Service</div>
+           <div class="Vboard">
+<style type="text/css">
+input.pp {
+
+font-size: 12px;
+border: 1px solid #000099;
+background-color: transparent;
+font-family: Arial, sans-serif;
+FONT-WEIGHT: bold;
+color: #000099;
+width: 21px;
+height: 21px;
+}
+input.pp_clear {
+
+font-size: 12px;
+border: 1px solid #000099;
+background-color: transparent;
+font-family: Arial, sans-serif;
+FONT-WEIGHT: bold;
+color: #000099;
+width: 75px;
+height: 20px;
+}
+input.pp_backspace {
+
+font-size: 12px;
+border: 1px solid #000099;
+background-color: transparent;
+font-family: Arial, sans-serif;
+FONT-WEIGHT: bold;
+color: #000099;
+width: 90px;
+height: 20px;
+}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+var isIE = document.all;
+var isNN = !document.all&&document.getElementById;
+var isN4 = document.layers;
+
+var ppX = 0;
+var ppY = 0;
+
+var editCtl = null;
+var tmpEditCtl = null;
+
+var rX = 0;
+var rY = 0;
+
+/*** Declaring variable and separate flag values for call id: 128860 --Begin-- satyabrata ghosh --29/08/2008 ***/
+var vIndex=0;
+var vRandomAlp=0;
+var vRandomNo=0;
+var vRandomSpl=0;
+/*** Declaring variable and separate flag values for call id: 128860 --End-- satyabrata ghosh --29/08/2008 ***/
+
+var isHot=false;
+var showFirstTime=true;
+
+
+
+
+function insertData(ctl, value) 
+{   
+    ctl.value = ctl.value + value;
+      
+}
+function applyNumber(ctl) {
+
+    if(editCtl != null) 
+    {
+        
+
+        if(ctl.name == 'pp_clear') {
+            editCtl.value = '';
+        }else if (ctl.name == 'pp_erase')
+        
+        {
+            editCtl.value= editCtl.value.substring(0,editCtl.value.length-1);
+        
+        
+        /*** Working of the Caps button for call id: 128860 --Begin--  satyabrata ghosh --29/08/2008 ***/
+        
+        }else if (ctl.name == 'pp_caps'){ 
+        
+        var elemen = document.forms[0].elements;
+        var vCaps = elemen['pp_caps'].value;
+
+	for(vIndex=0;vIndex<26;vIndex++){
+		var vAlp = elemen['alp_'+vIndex].value;
+		if(vAlp==vAlp.toLowerCase()){
+			var vTemp=vAlp.toUpperCase();
+			elemen['alp_'+vIndex].value=vTemp;
+			var vTemp=vCaps;
+			elemen['pp_caps'].value=vTemp;
+			//document.getElementById('pp_caps').style.background="Khaki";
+			//document.getElementById('pp_caps');
+		}
+		else{
+			var vTemp=vAlp.toLowerCase();
+			elemen['alp_'+vIndex].value=vTemp;
+			var vTemp=vCaps;
+			elemen['pp_caps'].value=vTemp;
+			//document.getElementById('pp_caps').style.background="Infobackground";
+			//document.getElementById('pp_caps');
+		}
+	}
+	
+	/*** Working of the Caps button for call id: 128860 --End--  satyabrata ghosh --29/08/2008 ***/
+		
+       
+        }
+        else 
+        {
+
+            if(!editCtl.maxLength || editCtl.maxLength == 0 || editCtl.maxLength > editCtl.value.length) {
+
+                insertData(editCtl, ctl.value);
+               }
+            tmpEditCtl = editCtl;
+                    
+           if(tmpEditCtl.focus)
+                setTimeout('tmpEditCtl.focus()', 1);
+        }
+    }
+}
+function donePinPad(buffer,whatform)
+{
+    try
+    {
+         document.forms[formname].buffer.focus();          
+    }
+    catch(e)
+    {
+        window.onerror = stopError;
+    }
+    finally
+    {
+        whatform.value = buffer.value;    
+    }
+	//buffer.value = '';
+}
+
+
+
+
+isIE=document.all? 1:0
+function noKeyboard(e){
+
+keyEntry = !isIE? e.which:event.keyCode;
+if((keyEntry < '255') || (keyEntry > '0'))
+{
+
+return false;
+}
+}
+var smallAlpArr=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var numArr=[0,1,2,3,4,5,6,7,8,9];
+var splCharArr=[".","+","-","!" ,"@","#","$" ,"%","&","*" ,"(",")","?" ,"=","<",">","^" ,"_",",",":",";","/","|","`","~","[","]","{","}","\\"];
+
+
+
+function settingPinPadCtl(whatobject,whatimage,whatelement,whatchecked)
+{
+/**** Depending on condition shuffle the keys on every click for call id: 128860 --Begin-- satyabrata ghosh --29/08/2008 ***/
+
+if(vRandomAlp==0){
+	// Shuffling the order of an array -AbdulMalik 6/27/2008
+	smallAlpArr.sort(function() {
+return 0.5 - Math.random()})
+}
+if(vRandomNo==0){
+	numArr.sort(function() {
+return 0.5 - Math.random()})
+}
+if(vRandomSpl==0){
+	splCharArr.sort(function() {
+return 0.5 - Math.random()})
+}
+
+/**** Depending on condition shuffle the keys on every click for call id: 128860 --End-- satyabrata ghosh --29/08/2008 ***/
+
+	var incr=0;
+	var incralp=0,incrno=0,incrspl=0;
+
+
+
+	var formname = '';
+	for(j=0;document.forms[j] != null;j++)
+	{
+
+
+		for(i=0; document.forms[j].elements[i] != null; i++)
+		{
+
+
+			if((document.forms[j].elements[i].name == whatelement))
+			{
+
+				formname = document.forms[j].name;
+
+			}
+
+		}
+
+	}
+/**** Reformed the table and button name,separate table created for action buttons for call id: 128860 --Begin-- satyabrata ghosh --29/08/2008 ***/
+
+	if(whatimage == 1 ){  /** This condition is used for User id**/
+
+		var sHTML='<table border="0" ><tr><td><table bgcolor="transparent" >'
+			+'<tr><td nowrap="nowrap" colspan="3" ><ilayer width="100%" onSelectStart="return false">'
+			+'<layer width="100%" onMouseover="isHot=false;if (isN4) ddN4(pp_div)" onMouseout="isHot=false">'
+			+'<font color="#000099" size="0.8">&nbsp;<b>Virtual Keyboard </b></Font><Font color="black" size="0.8">(for entering password only)&nbsp;&nbsp;&nbsp;<a href = # onclick=window.open("../../../../../docs/virtual_keyboard.html")>Help</a></font>'
+			+'</layer></ilayer>'
+			+'</td>'
+			+'<td align="right"colspan="1"><input length="13" type=hidden name="buffer" value="" id=buffer onkeyup=checkPinPad(this) ></td>'
+			+'</tr></table></td></tr>'
+			+'<tr><td><table bgcolor="transparent" cellpadding = 3>'			
+		    +'<td align="left" ><input class="pp" type="button" name="alp_0" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_1" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_2" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="alp_3" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_4" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_5" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="alp_6" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_7" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_8" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'</td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_0" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_1" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_26" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'</tr><tr>'
+			+'<td align="left"><input class="pp" type="button" name="alp_9" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_10" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_11" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="alp_12" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_13" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_14" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="alp_15" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_16" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_17" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'</td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_2" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_3" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_27" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'</tr><tr>'
+			+'<td align="left"><input class="pp" type="button" name="alp_18" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_19" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_20" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="alp_21" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_22" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="alp_23" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="alp_24" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="alp_25" value="'+smallAlpArr[incralp++]+'" onclick="applyNumber(this)"/></td>'
+			+'</td>'
+			+'</td><td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_4" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_5" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_15" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'</tr><tr><td></td></tr>'
+			+'<td align="left"><input class="pp" type="button" name="pp_6" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_7" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_8" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_9" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_10" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_11" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_12" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_13" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'</td><td><td>'			
+			+'<td align="right"><input class="pp" type="button" name="pp_16" value="'+numArr[incrno++]+'" onclick="applyNumber(this)"/></td>'
+			+'</tr><tr>'
+			+'<td align="left"><input class="pp" type="button" name="pp_17" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_18" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_19" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_20" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_21" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_22" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_23" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_24" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_25" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'</td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_14" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'</tr><tr>'
+			+'<td align="left"><input class="pp" type="button" name="pp_28" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_29" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_30" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="left"><input class="pp" type="button" name="pp_31" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="center"><input class="pp" type="button" name="pp_32" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_33" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_34" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+            +'<td align="right"><input class="pp" type="button" name="pp_35" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_36" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+            +'</td>'
+            +'<td align="right"><input class="pp" type="button" name="pp_37" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_38" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+			+'<td align="right"><input class="pp" type="button" name="pp_39" value="'+splCharArr[incrspl++]+'" onclick="applyNumber(this)"/></td>'
+            +'</tr>'	
+			+'</table>'
+			+'<tr><td><table bgcolor="transparent" cellpadding = 3>'
+			+'<tr valign=middle >'
+			+'<td align="right"><input class="pp_clear" type="button" name="pp_caps" value="Caps Lock" alt="Caps" onclick="applyNumber(this)"/></td>'
+			+'<td align = "right"><input class="pp_backspace" type="button" name="pp_erase" value="< Backspace&nbsp; " onclick="applyNumber(this)"/></td>'
+			+'<td><input class="pp_clear" type="button" name="pp_clear" value="Clear" onclick="applyNumber(this);donePinPad(document.'+formname+'.buffer,document.'+formname+'.'+whatelement+')"/></td>'
+			+'</tr></table></td></tr></table>';
+	}
+	ScriptDiv.innerHTML = sHTML ;
+   
+	
+	// Written by HP Cat Team on 01-09-2008
+	var frmName = null;
+ 	setPinPadCtl(frmName);
+	
+    if(whatchecked == true)
+    {
+        var elemen = document.forms[0].elements;
+        for(vIndex=0;vIndex<26;vIndex++)
+	    {
+		    var vAlp = elemen['alp_'+vIndex].value;
+		    elemen['alp_'+vIndex].disabled = true;
+		       					
+	    }
+	    for(vIndex=0;vIndex<40;vIndex++)
+	    {
+	        var vPP = elemen['pp_'+vIndex].value;
+		    elemen['pp_'+vIndex].disabled = true; 
+	    }
+	    elemen['pp_caps'].disabled = true;
+	    elemen['pp_clear'].disabled = true;
+	    elemen['pp_erase'].disabled = true; 
+	    
+	}
+	else
+	{
+	    var elemen = document.forms[0].elements;
+        for(vIndex=0;vIndex<26;vIndex++)
+	    {
+		    var vAlp = elemen['alp_'+vIndex].value;
+		    elemen['alp_'+vIndex].disabled = false;
+		}
+	    for(vIndex=0;vIndex<40;vIndex++)
+	    {
+	        var vPP = elemen['pp_'+vIndex].value;
+		    elemen['pp_'+vIndex].disabled = false; 
+	    }
+	    elemen['pp_caps'].disabled = false;
+	    elemen['pp_clear'].disabled = false;
+	    elemen['pp_erase'].disabled = false;
+	    
+	}
+	
+// End - HP Cat Team on 01-09-2008
+	
+}
+
+function setPinPadCtl(ctl) 
+{    
+       
+    if(ctl && !editCtl && ctl.maxLength && ctl.maxLength <= ctl.value.length) 
+    {
+        return;
+    }
+    editCtl = ctl;
+
+    topLayer=isIE ? 'BODY' : 'HTML';
+    layer = isIE ? document.all.pp_div : document.getElementById ? document.getElementById('pp_div') : document.layers ? document.layers.pp_div : document.pp_div;
+
+	if(isIE && event || !isIE && ctl) {
+
+        hotLayer=isIE ? event.srcElement : ctl.target;
+        while (hotLayer != null && hotLayer.id != 'titleBar' && hotLayer.tagName != topLayer) {
+
+          hotLayer=isIE ? hotLayer.parentElement : hotLayer.parentNode;
+        }
+        if (hotLayer != null && hotLayer.id == 'titleBar' && ctl != null) {
+
+          offsetx=isIE ? event.clientX : ctl.clientX;
+          offsety=isIE ? event.clientY : ctl.clientY;
+          nowX=parseInt(layer.style.left);
+          nowY=parseInt(layer.style.top);
+          ddEnabled=true;
+          document.onmousemove=dd;
+        }
+    }
+    if(layer != null) {
+
+        if(editCtl != null) {
+
+            if (showFirstTime) {
+
+                showFirstTimePinPad(layer, ctl);
+                showFirstTime=false;
+            } else {
+
+
+				showPinPad(layer, ctl);
+            }
+        } else {
+
+			hidePinPad(layer);
+        }
+    } else {
+
+        alert('Pin Pad not supported by your browser');
+    }
+}
+
+function onloadNumber(ctl) {
+
+    ctl.disabled = editCtl == null;
+}
+
+function checkPinPad(ctl) {
+
+    if(ctl.maxLength && ctl.maxLength != 0 && ctl.maxLength <= ctl.value.length) {
+
+        setPinPadCtl(null);
+    } else {
+
+        if(editCtl == null)
+            setPinPadCtl(this);
+    }
+}
+
+function showPinPad(ctl, pctl) {
+
+
+	if (isIE || isNN) {
+
+        layer.style.visibility='visible';
+    } else if (isN4) {
+
+        document.pp_div.visibility='show';
+    }
+}
+
+function showFirstTimePinPad(ctl, pctl) {
+
+    var pX = 0;
+    var pY = 0;
+
+    if(ppY) {
+
+        pY = ppY;
+    } else if(pctl.screenTop) {
+
+        pY = pctl.screenTop + 0;
+    } else if(pctl.screenY) {
+
+        pY = pctl.screenY + 0;
+    }
+    if(ppX) {
+
+        pX = ppX;
+    } else if(pctl.screenLeft) {
+
+        pX = pctl.screenLeft;
+    } else if(pctl.screenX) {
+
+        pX = pctl.screenX;
+    }
+    if(ctl.style) {
+
+        ctl.style.top = pY + rX;
+        ctl.style.left = pX + rY;
+    }
+    if (isIE || isNN) {
+
+		layer.style.visibility='visible';
+    } else if (isN4) {
+
+        document.pp_div.visibility='show';
+	}
+	 var elemen = document.forms[0].elements;
+ }
+
+function hidePinPad(ctl){
+
+    if (isIE || isNN) {
+
+		layer.style.visibility='hidden';
+
+	} else if (isN4) {
+
+		document.pp_div.visibility='hide';
+    }
+}
+
+function ddInit(ctl){
+
+    var topLayer = isIE ? 'BODY' : 'HTML';
+
+	var layer = isIE ? document.all.pp_div : document.getElementById ? document.getElementById('pp_div') : document.layers ? document.layers.pp_div : document.pp_div;
+
+	var hotLayer = isIE ? event.srcElement : ctl.target;
+
+	if (layer != null) {
+
+        while (hotLayer.id != 'titleBar' && hotLayer.tagName != topLayer) {
+
+		  hotLayer=isIE ? hotLayer.parentElement : hotLayer.parentNode;
+        }
+        if (hotLayer.id == 'titleBar') {
+
+
+		  offsetx=isIE ? event.clientX : ctl.clientX;
+          offsety=isIE ? event.clientY : ctl.clientY;
+          nowX=parseInt(layer.style.left);
+          nowY=parseInt(layer.style.top);
+          ddEnabled=true;
+          document.onmousemove=dd;
+        }
+    }
+}
+
+function dd(ctl){
+
+  if (!ddEnabled) return;
+  layer.style.left=isIE ? nowX+event.clientX-offsetx : nowX+ctl.clientX-offsetx;
+  layer.style.top=isIE ? nowY+event.clientY-offsety : nowY+ctl.clientY-offsety;
+  return false;
+}
+
+/*-----------------*/
+//function to get the virtual keyboard displayed at random locations
+/*-----------------*/
+
+function ddN4(whatLayer){
+
+  if (!isN4) return;
+  N4=eval(whatLayer);
+  N4.captureEvents(Event.MOUSEDOWN|Event.MOUSEUP);
+  N4.onmousedown=function(ctl){
+
+    N4.captureEvents(Event.MOUSEMOVE);
+    N4x=ctl.x;
+    N4y=ctl.y;
+  }
+  N4.onmousemove=function(ctl){
+
+    if (isHot){
+
+      N4.moveBy(ctl.x-N4x,ctl.y-N4y);
+      return false;
+    }
+  }
+  N4.onmouseup=function(){
+
+    N4.releaseEvents(Event.MOUSEMOVE);
+  }
+}
+function stopError() 
+{
+  return true;
+}
+
+</script>
+
+
+
+
+<div id="pp_div" align="Center" style="visibility: visible; top: 0px; left: 0px;">
+	<div id="ScriptDiv"><table border="0"><tbody><tr><td><table bgcolor="transparent"><tbody><tr><td nowrap="nowrap" colspan="3"><ilayer width="100%" onselectstart="return false"><layer width="100%" onmouseover="isHot=false;if (isN4) ddN4(pp_div)" onmouseout="isHot=false"><font color="#000099" size="0.8">&nbsp;<b>Virtual Keyboard </b></font><font color="black" size="0.8">(for entering password only)&nbsp;&nbsp;&nbsp;<a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&quot;../../../../../docs/virtual_keyboard.html&quot;)">Help</a></font></layer></ilayer></td><td align="right" colspan="1"><input length="13" type="hidden" name="buffer" value="" id="buffer" onkeyup="checkPinPad(this)"></td></tr></tbody></table></td></tr><tr><td><table bgcolor="transparent" cellpadding="3"><tbody><tr><td align="left"><input class="pp" type="button" name="alp_0" value="m" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_1" value="a" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_2" value="p" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="alp_3" value="g" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_4" value="o" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_5" value="r" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="alp_6" value="j" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_7" value="y" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_8" value="w" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_0" value="0" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_1" value="3" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_26" value="7" onclick="applyNumber(this)" disabled=""></td></tr><tr><td align="left"><input class="pp" type="button" name="alp_9" value="t" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_10" value="q" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_11" value="v" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="alp_12" value="b" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_13" value="f" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_14" value="n" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="alp_15" value="x" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_16" value="u" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_17" value="h" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_2" value="5" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_3" value="8" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_27" value="6" onclick="applyNumber(this)" disabled=""></td></tr><tr><td align="left"><input class="pp" type="button" name="alp_18" value="i" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_19" value="z" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_20" value="c" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="alp_21" value="l" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_22" value="k" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="alp_23" value="e" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="alp_24" value="s" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="alp_25" value="d" onclick="applyNumber(this)" disabled=""></td><td></td><td align="right"><input class="pp" type="button" name="pp_4" value="1" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_5" value="4" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_15" value="9" onclick="applyNumber(this)" disabled=""></td></tr><tr><td></td></tr><tr><td align="left"><input class="pp" type="button" name="pp_6" value="!" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_7" value="(" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_8" value="+" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_9" value="@" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_10" value="_" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_11" value="?" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_12" value="&gt;" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_13" value="%" onclick="applyNumber(this)" disabled=""></td><td></td><td></td><td align="right"><input class="pp" type="button" name="pp_16" value="2" onclick="applyNumber(this)" disabled=""></td></tr><tr><td align="left"><input class="pp" type="button" name="pp_17" value="," onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_18" value=";" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_19" value="/" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_20" value="\" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_21" value="*" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_22" value="#" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_23" value="]" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_24" value="}" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_25" value="`" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_14" value="$" onclick="applyNumber(this)" disabled=""></td></tr><tr><td align="left"><input class="pp" type="button" name="pp_28" value="=" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_29" value="." onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_30" value=")" onclick="applyNumber(this)" disabled=""></td><td align="left"><input class="pp" type="button" name="pp_31" value="&lt;" onclick="applyNumber(this)" disabled=""></td><td align="center"><input class="pp" type="button" name="pp_32" value="^" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_33" value="&amp;" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_34" value="-" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_35" value=":" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_36" value="|" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_37" value="~" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_38" value="{" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp" type="button" name="pp_39" value="[" onclick="applyNumber(this)" disabled=""></td></tr></tbody></table></td></tr><tr><td><table bgcolor="transparent" cellpadding="3"><tbody><tr valign="middle"><td align="right"><input class="pp_clear" type="button" name="pp_caps" value="Caps Lock" alt="Caps" onclick="applyNumber(this)" disabled=""></td><td align="right"><input class="pp_backspace" type="button" name="pp_erase" value="&lt; Backspace  " onclick="applyNumber(this)" disabled=""></td><td><input class="pp_clear" type="button" name="pp_clear" value="Clear" onclick="applyNumber(this);donePinPad(document.RetailSignOn.buffer,document.RetailSignOn.CorporateSignonPassword)" disabled=""></td></tr></tbody></table></td></tr></tbody></table></div>
+</div>
+
+<!--<script language="JavaScript" type="text/javascript">ppX=250;ppY=250;setTimeout('setPinPadCtl(null)',1);</script>-->
+
+
+
+
+</div>
+
+
+	 
+	            
+	            <a class="leftext" href="https://starconnectcbs.bankofindia.com/BankAwayRetail/sgonHttpHandler.aspx?Action.ONUC.Init.001=Y&amp;AppSignonBankId=013&amp;AppType=retail">
+	            <img src="./Bank of India Internet Banking Retail Signon_files/newuser.png" alt="New User" class="marT35 " height="35px"></a>
+	            <a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/sgonHttpHandler.aspx?Action.Fgowd.Init.011=Y&amp;AppSignonBankId=013&amp;AppType=retail" style="border:0;">
+	            <img src="./Bank of India Internet Banking Retail Signon_files/forgotpassword.png" alt="" border="0" height="35px" class="marT15 marL25"></a>
+	            
+	          </div>
+
+		<div id="Demo">
+		                <div class="demo marT8 confirmation" id="Doorstep_1" onclick="DoorstepPopup(1)" align="right"><img src="./Bank of India Internet Banking Retail Signon_files/img_sd.png" width="235px" alt="Door Step"></div>
+						
+					 <div align="Center" class="form" style="background-color: rgb(160, 219, 254); width: 206px; text-align: center; display: none; border: 1px solid rgb(156, 156, 156); color: rgb(3, 71, 113); font-size: 13px; padding: 7px 5px;" id="Doorstep_2">
+			             <ul align="Center" style="border: 0px;">
+			                <li class="bortop" style="border: 0px;"> <select name="States" id="ddl_states" style="width: 200px;">
+                            <option value=" ">----------- Select State ----------- </option>
+							<option value="Integra">Andhra Pradesh</option>
+                            <option value="Atyatyi">Assam</option> 
+							<option value="Atyatyi">Bihar</option>
+							<option value="Atyatyi">Chandigarh</option>
+							<option value="Integra">Chhattisgarh</option>
+							<option value="Integra">Goa</option>
+							<option value="Atyatyi">Gujarat</option>
+							<option value="Atyatyi">Haryana</option>
+							<option value="Integra">Himachal Pradesh</option>
+							<option value="Integra">Jammu &amp; Kashmir</option>
+							<option value="Integra">Jharkhand</option>
+							<option value="Integra">Karnataka</option>
+							<option value="Integra">Kerala</option>
+							<option value="Integra">Madhya Pradesh</option>
+							<option value="Atyatyi">Maharashtra</option>
+							<option value="Atyatyi">Meghalaya</option>
+							<option value="Atyatyi">Ncr of Delhi</option>
+							<option value="Atyatyi">Odisha</option>
+							<option value="Atyatyi">Puducherry</option>
+							<option value="Integra">Punjab</option>
+							<option value="Integra">Rajasthan</option>
+						    <option value="Atyatyi">Tamil Nadu</option>
+						    <option value="Atyatyi">Telangana</option>
+							</select></li>
+							
+							
+							<li style="border: 0px;">   <center> <input type="button" value="  GO  " class="confirmation"> </center></li>  
+			             </ul>
+			           </div>
+
+					   
+					  <div class="demo marT10" onclick="DoorstepPopup(2)" align="right"><img src="./Bank of India Internet Banking Retail Signon_files/applicationform.png" alt="Application Form"></div>
+			           <div class="form" id="Doorstep_3" style="display: block;">
+			             <ul align="left">
+			               <li class="bortop"><a class="leftext" href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;../../../../../docs/Starconnect Retail Reqeust Form.pdf&#39;, &#39;Request&#39;,&#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=677, height=400&#39;)">New User Request</a></li>
+			               <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;../../../../../docs/Starconnect Retail Transaction Request Form.pdf&#39;, &#39;Request&#39;,&#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=677, height=400&#39;)">Transaction Password</a></li>
+			               <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;../../../../../docs/StarConnect CBS Ack of Password Retail1.pdf&#39;, &#39;Request&#39;,&#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=677, height=400&#39;)">
+			               Password Acknowledgment </a></li>
+			               <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;../../../../../docs/Starconnect Unblock or Regeneration Form.pdf&#39;, &#39;Request&#39;,&#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=677, height=400&#39;)">
+			               Regenerate / Unblock Password</a> </li>
+			             </ul>
+			           </div>
+			           <div class="demo marT10"><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;http://www.bankofindia.co.in/Html/internetbanking.html&#39;,&#39;&#39;,&#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=577, height=300&#39;)">
+			           <img src="./Bank of India Internet Banking Retail Signon_files/netbanking.png" alt="Net Banking"></a></div>
+			            
+			           <div class="form marT10">
+			              <div class="myit"><img src="./Bank of India Internet Banking Retail Signon_files/itreturn.jpg" alt="It Return"></div>
+			              <div class="ittxt">
+						  <a href="https://boiweb.bankofindia.co.in/online-ots2" target="_blank">
+						  <font color="blue" ;="" font-size:="" 13px="">One Time Settlement (OTS) in NPA Accounts</font>
+						  </a>
+                          <br>
+                          <a href="https://staraks.bankofindia.co.in/shishu-mudra/basic-info" target="_blank">
+						  <font color="blue" ;="" font-size:="" 13px="">E-Mudra Loan</font>
+						  </a>
+                          <br>
+                          <a href="https://play.google.com/store/apps/details?id=com.infrasoft.boimerchant" target="_blank">
+						  <font color="blue" ;="" font-size:="" 13px="">Apply for Merchant QR Code-Android</font>
+						  </a>
+                          <br>
+                          <a href="https://apps.apple.com/in/app/boi-biz-pay/id1635133290" target="_blank">
+						  <font color="blue" ;="" font-size:="" 13px="">Apply for Merchant QR Code-iOS</font>
+						  </a>
+						  </div>
+			           </div>
+			 </div>
+			<center>
+			<div style="color: rgb(0, 125, 198); padding-left: 27px; font-size: 13px; float: left;"><br> 
+		                	<b>
+                              <blink style="color: blue;"> BEWARE !! Never disclose your OTP/PIN/CVV/Expiry date/Card Number to anybody over phone or any other media. Only fraudsters are asking such details.
+							  <br>
+							  सावधान !! कभी भी अपना कार्ड संख्या/पिन/सीवीवी/ओटीपी/समाप्ति तिथि किसी को मोबाइल कॉल/ई-मेल पर नहीं बताए। यह आपके लिये धोखाधड़ी/फ़्रौड का कारण बन सकता है।          
+							  </blink>  
+                        </b>
+			            </div>  
+			  </center>
+		     </div>
+			<div class="clear"></div>
+			<br>			
+			       <div class="notice">
+			       <a href="javascript:void(0)" onclick="window.open(&#39;https://www.entrust.net/customer/profile.cfm?domain=starconnectcbs.bankofindia.com&#39;, &#39;Entrust&#39;, &#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=677, height=400&#39;)" title="Click here to verify">
+				<img src="./Bank of India Internet Banking Retail Signon_files/Entrust_SSL.GIF" alt="Entrust" height="57" style="float:left" border="0"></a>
+			      <font style="color:#007dc6;">IMPORTANT: In our constant endeavor to give you better service and user experience, we have enhanced our Internet Banking site. You may feel changes in the User
+			Interface (look and feel). Please change your password regularly and keep your computer protected and updated with latest Antivirus and patches. Please do not click 
+			on any hyperlinks to reach to our site, but type our site address http://www.bankofindia.co.in</font>
+			</div>
+			<center><font color="black" style=" font-size: 12px">
+			<b>[Best viewed in IE version 9 and above, Mozilla Firefox 34 and above , Google Chrome 40 and above and Safari 7 and above with resolution in 1024 x 768.139-DR] <b>
+				</b></b></font></center><b><b>
+			      <div id="Progress" align="Center" style="display: none;">
+			      		<script type="text/javascript">
+			      		var bar1= createBar(300,2,'white',1,'black','#000099',85,7,3,"");
+			      		</script><div id="_xpbar0" style="visibility:visible; position:relative; overflow:hidden; width:300px; height:2px; background-color:white; border-color:black; border-width:1px; border-style:solid; font-size:1px;"><span id="blocks0" style="left: 310px; position: absolute; font-size: 1px;"><span style="background-color:#000099; left:-0px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:1"></span><span style="background-color:#000099; left:-3px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:0.8571428571428571"></span><span style="background-color:#000099; left:-6px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:0.7142857142857143"></span><span style="background-color:#000099; left:-9px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:0.5714285714285714"></span><span style="background-color:#000099; left:-12px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:0.42857142857142855"></span><span style="background-color:#000099; left:-15px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:0.2857142857142857"></span><span style="background-color:#000099; left:-18px; font-size:1px; position:absolute; width:2px; height:2px; -Moz-opacity:0.14285714285714277"></span></span></div>				
+			      		<font size="2" color="DimGray">
+			      		Please wait while loading ...............
+			      		</font>
+			      		</div>	
+			      								
+					
+					
+			      <div class="footer">
+			                <ul>
+			                 
+			                  <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;https://starconnectcbs.bankofindia.com/BankAwayRetail/docs/Trouble_Logging_In_Retail.pdf&#39;, &#39;Terms&#39;, &#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0&#39;)" title="Trouble Logging in">Trouble Logging in</a>|</li>
+			                  <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;https://starconnectcbs.bankofindia.com/BankAwayRetail/docs/SafeBankingL.htm&#39;, &#39;SafeInternetBanking&#39;, &#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0, width=400, height=250&#39;)" title="Safe Internet Banking">Safe Internet Banking</a>|</li>
+			                  <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;https://starconnectcbs.bankofindia.com/BankAwayRetail/docs/Terms_Conditions_StarConnect.htm&#39;, &#39;Terms&#39;, &#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0&#39;)" title="Terms &amp; Conditions">Terms and Conditions</a>|</li>
+			                  <li><a href="https://starconnectcbs.bankofindia.com/BankAwayRetail/(S(bmkrfecsh4bp5m0bhrxnxoqv))/web/L001/retail/jsp/user/RetailSignOn.aspx?RequestId=65255970#" onclick="window.open(&#39;https://starconnectcbs.bankofindia.com/BankAwayRetail/docs/Disclaimer.htm&#39;, &#39;Disclaimer&#39;, &#39;toolbar=0, scrollbars=1, location=0, status=0, menubars=0, directories=0, resizable=0&#39;)" title="Disclaimer">Disclaimer</a>|</li>
+			                  <li><a href="mailto:boi.starconnect@bankofindia.co.in" title="Contact Us">Contact Us</a></li>
+			                </ul>
+			                
+			             </div>
+		    
+	</b></b></div><b><b>
+
+</b></b></div></div></center><b><b>
+<input type="HIDDEN" name="folderId" value="AL">
+<input type="HIDDEN" name="CorporateSignonAccessChannel" value="I">
+<input type="HIDDEN" name="UserType" value="1">
+
+
+
+
+<div class="Rshadow"><img src="./Bank of India Internet Banking Retail Signon_files/rightshadow.png" alt="Right Shadow"></div>
+	  	
+
+
+
+<script>
+	const togglePassword = document.querySelector('#togglePassword');
+		
+	const password = document.querySelector('#id_password');
+
+	togglePassword.addEventListener('click', function (e) {
+
+		// Toggle the type attribute
+		const type = password.getAttribute('type') === 'text' ? 'password' : 'text';
+		password.setAttribute('type', type);
+
+		// Toggle the eye slash icon
+		if  (togglePassword.src.match ("https://starconnectcbs.bankofindia.com/BankAwayRetail/web/L001/images/Toggle_eye_close.png"))
+		{
+			togglePassword.src = "https://starconnectcbs.bankofindia.com/BankAwayRetail/web/L001/images/Toggle_eye_open.png";
+		} else {
+			togglePassword.src = "https://starconnectcbs.bankofindia.com/BankAwayRetail/web/L001/images/Toggle_eye_close.png";
+		}
+	});
+</script>
+
+
+
+
+
+<script language="JavaScript">
+	var coll = document.getElementsByClassName("collapsible");
+var i;
+
+
+ function DoorstepPopup(val) {
+  var x = document.getElementById("Doorstep_2");
+ var x3 = document.getElementById("Doorstep_3");
+ if(val=="1")
+ {  
+   // x.style.display = "block"; 
+     //above line commented by  and below lone added on 07112023
+      x.style.display = "none";
+    x3.style.display =  "none"; 
+ }else if(val=="2"){
+   x.style.display = "none"; 
+    x3.style.display =  "block"; 
+ }
+ else{
+  x.style.display = "none"; 
+    x3.style.display =  "block"; 
+ } 
+} 
+
+
+var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) {
+      var n = document.RetailSignOn.ddl_states.value;  
+  
+		if(confirm("By clicking on 'OK', you will be re-directed to a third party site for registering for Doorstep Banking Services. Third party websites are not owned or controlled by 'Bank of India', who bears no responsibility for them.")) 
+	{
+       
+		//if (n=="Integra")
+	 //     {
+            window.open("https://dsb.imfast.co.in/doorstep/login");
+         //      window.location.href = "https://dsb.imfast.co.in/doorstep/login"
+	      //}else if (n=="Atyatyi")
+	      //{
+		    
+	      //      window.location.href = "https://doorstepbanks.com/"
+	      //}
+    }
+    };
+    for (var i = 0, l = elems.length; i < l; i++) {
+        elems[i].addEventListener('click', confirmIt, false);
+		
+    }
+	
+	
+</script>
+</b></b></form></jsp:forward><iframe name="TS_Injection" style="width: 0px; height: 0px; visibility: hidden; display: none;" src="./Bank of India Internet Banking Retail Signon_files/saved_resource.html"></iframe></body></html>
